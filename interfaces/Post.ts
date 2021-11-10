@@ -1,11 +1,11 @@
 interface PostsInterface {
   author: {
-    bio : string, 
-    name : string, 
-    id : string, 
-    photo : {
-      url : string
-    }
+    bio: string;
+    name: string;
+    id: string;
+    photo: {
+      url: string;
+    };
   };
   categories: [];
   createdAt: string;

@@ -12,7 +12,7 @@ const PostCard: React.FC<postProps> = ({ post }: postProps) => {
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md pb-80 mb-6">
         <img
-          className="object-top absolute h-80 w-full lg:object-cover object-cover shadow-lg rounded-t-lg lg: rounded-lg"
+          className=" absolute h-80 w-full lg:object-cover object-center shadow-lg rounded-t-lg lg: rounded-lg"
           src={post.featuredImage.url}
           alt={post.title.toLowerCase()}
         />

@@ -9,7 +9,7 @@ interface postsArray {
   posts: [{ cursor: string; node: PostsInterface }];
 }
 
-const Home: React.FC<postsArray> = ({ posts }: postsArray) => (
+const Home: React.FC<postsArray> = ({ posts }) => (
   <div className="container mx-auto px-10 mb-8 ">
     <Head>
       <title>CMS Blog</title>
