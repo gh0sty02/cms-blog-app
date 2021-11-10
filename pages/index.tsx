@@ -3,7 +3,7 @@ import Head from "next/head";
 import React from "react";
 import { getPosts } from "../services/index";
 import { Categories, PostCard, PostWidget } from "../components/index";
-import PostsInterface from "../interfaces/Post";
+import PostsInterface from "../interfaces/IPost";
 
 interface postsArray {
   posts: [{ cursor: string; node: PostsInterface }];

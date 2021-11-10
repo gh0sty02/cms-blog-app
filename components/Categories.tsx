@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { getCategories } from "../services";
-import categoriesI from "../interfaces/Category";
+import categoriesI from "../interfaces/ICategory";
 
 const Categories: React.FC = () => {
   const [categories, setCategories] = useState<categoriesI>([]);
@@ -9,8 +9,6 @@ const Categories: React.FC = () => {
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories));
   }, []);
-
-  console.log(categories);
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 mb-8 pb-12">

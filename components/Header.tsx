@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { getCategories } from "../services";
-import categoriesI from "../interfaces/Category";
+import categoriesI from "../interfaces/ICategory";
 
 const Header: React.FC = () => {
   const [categories, setCategories] = useState<categoriesI>([]);

@@ -1,5 +1,5 @@
 import React from "react";
-import PostsInterface from "../interfaces/Post";
+import PostsInterface from "../interfaces/IPost";
 import moment from "moment";
 import Link from "next/link";
 
@@ -7,7 +7,7 @@ interface postProps {
   post: PostsInterface;
 }
 
-const PostCard: React.FC<postProps> = ({ post }: postProps) => {
+const PostCard: React.FC<postProps> = ({ post }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md pb-80 mb-6">

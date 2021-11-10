@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Link from "next/link";
 import { getRecentPosts, getSimilarPosts } from "../services";
-import CategoriesI from "../interfaces/Category";
+import CategoriesI from "../interfaces/ICategory";
 
 interface posts {
   categories: CategoriesI;
@@ -13,13 +13,13 @@ const PostWidget: React.FC<posts> = ({ slug, categories }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
   useEffect(() => {
     if (slug) {
-      getSimilarPosts().then((result) => setRelatedPosts(result));
+      getSimilarPosts(categories, slug).then((result) =>
+        setRelatedPosts(result)
+      );
     } else {
       getRecentPosts().then((result) => setRelatedPosts(result));
     }
   }, [slug]);
-
-  console.log(relatedPosts);
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
