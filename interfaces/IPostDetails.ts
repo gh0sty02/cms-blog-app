@@ -16,10 +16,12 @@ interface IPostDetails {
       children: [{ type: string; children: [{ text: string }] }];
     };
   };
-  categories: {
-    name: string;
-    slug: string;
-  };
+  categories: [
+    {
+      name: string;
+      slug: string;
+    }
+  ];
 }
 
 export default IPostDetails;

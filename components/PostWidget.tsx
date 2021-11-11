@@ -5,7 +5,7 @@ import { getRecentPosts, getSimilarPosts } from "../services";
 import CategoriesI from "../interfaces/ICategory";
 
 interface posts {
-  categories: CategoriesI;
+  categories: string[];
   slug: string;
 }
 
