@@ -10,14 +10,21 @@ import {
   Author,
   Comments,
   CommentsForm,
+  Loader,
 } from "../../components";
 import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
 
 interface IPost {
   post: IPostDetails;
 }
 
 const PostDetails: React.FC<IPost> = ({ post }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader />;
+  }
   return (
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
