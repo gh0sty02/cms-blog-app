@@ -13,7 +13,7 @@ interface IPostDetails {
   slug: string;
   content: {
     raw: {
-      children: {};
+      children: [{ type: string; children: [{ text: string }] }];
     };
   };
   categories: {

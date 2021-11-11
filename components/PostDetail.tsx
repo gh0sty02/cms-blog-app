@@ -64,7 +64,6 @@ const PostDetail: React.FC<IPost> = ({ post }) => {
     }
   };
 
-  console.log(post);
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md mb-6">
@@ -107,6 +106,7 @@ const PostDetail: React.FC<IPost> = ({ post }) => {
           </div>
         </div>
         <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
+
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemindex) =>
             getContentFragment(itemindex, item.text, item)

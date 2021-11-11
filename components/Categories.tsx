@@ -15,7 +15,7 @@ const Categories: React.FC = () => {
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">Catgories</h3>
       {categories.map((category) => (
         <Link href={`/category/${category.slug}`} key={category.slug}>
-          <span className="cursor-pointer block pb-3 mb-3">
+          <span className="cursor-pointer block pb-3 mb-3 border-b">
             {category.name}
           </span>
         </Link>
